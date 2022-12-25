@@ -79,7 +79,7 @@ public class KhachHangController extends HttpServlet {
 		if(khachHang!=null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("khachHang", khachHang);
-			session.setMaxInactiveInterval(5*60);
+			session.setMaxInactiveInterval(10*60);
 			url = "/index.jsp";
 		}else {
 			request.setAttribute("baoLoi", "Incorrect username or password.");
